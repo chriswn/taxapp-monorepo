@@ -21,7 +21,7 @@ jobs:
           cache: 'npm'
 
       - name: Install Monorepo Dependencies
-        run: npm install --include=optional
+        run: npm install --force
 
       - name: Force Linux Native Bindings for Rolldown
         run: npm install --prefix TaxApp-Frontend @rolldown/binding-linux-x64-gnu --no-save
