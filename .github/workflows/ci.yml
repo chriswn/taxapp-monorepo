@@ -21,7 +21,7 @@ jobs:
           cache: 'npm'
 
       - name: Install Monorepo Dependencies
-        run: npm install --no-package-lock --force
+        run: rm -f package-lock.json && npm install --force
 
       - name: Build shared package
         run: npm run build:shared
