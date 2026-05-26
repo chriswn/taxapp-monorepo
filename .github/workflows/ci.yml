@@ -23,6 +23,9 @@ jobs:
       - name: Install Monorepo Dependencies
         run: npm install --include=optional
 
+      - name: Force Linux Native Bindings for Rolldown
+        run: npm install @rolldown/binding-linux-x64-gnu --workspace=taxapp-frontend --no-save
+
       - name: Build shared package
         run: npm run build:shared
 
