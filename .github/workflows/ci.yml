@@ -24,12 +24,10 @@ jobs:
         run: npm install --include=optional
 
       - name: Force Linux Native Bindings for Rolldown
-        working-directory: TaxApp-Frontend
-        run: npm install @rolldown/binding-linux-x64-gnu --no-save
+        run: npm install --prefix TaxApp-Frontend @rolldown/binding-linux-x64-gnu --no-save
 
       - name: Force Linux Native Bindings for Lightning CSS
-        working-directory: TaxApp-Frontend
-        run: npm install lightningcss-linux-x64-gnu --no-save
+        run: npm install --prefix TaxApp-Frontend lightningcss-linux-x64-gnu --no-save
 
       - name: Build shared package
         run: npm run build:shared
