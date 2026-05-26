@@ -21,13 +21,7 @@ jobs:
           cache: 'npm'
 
       - name: Install Monorepo Dependencies
-        run: npm install --force
-
-      - name: Force Linux Native Bindings for Rolldown
-        run: npm install --prefix TaxApp-Frontend @rolldown/binding-linux-x64-gnu --no-save
-
-      - name: Force Linux Native Bindings for Lightning CSS
-        run: npm install --prefix TaxApp-Frontend lightningcss-linux-x64-gnu --no-save
+        run: npm install --no-package-lock --force
 
       - name: Build shared package
         run: npm run build:shared
