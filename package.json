@@ -1,0 +1,17 @@
+{
+  "name": "taxapp-workspace",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "App",
+    "TaxApp-Frontend",
+    "shared"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace @taxapp/shared && npm run build --workspace tax-mvp-backend && npm run build --workspace taxapp-frontend",
+    "build:shared": "npm run build --workspace @taxapp/shared",
+    "build:ci": "npm run build",
+    "typecheck": "npm run typecheck --workspace @taxapp/shared && npm run typecheck --workspace tax-mvp-backend && npm run typecheck --workspace taxapp-frontend",
+    "typecheck:ci": "npm run typecheck"
+  }
+}
